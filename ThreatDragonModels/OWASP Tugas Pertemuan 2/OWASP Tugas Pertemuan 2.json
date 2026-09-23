@@ -35,8 +35,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "274333a2-6c5b-4ccb-8e18-76f80df40b25",
             "zIndex": -1,
+            "id": "274333a2-6c5b-4ccb-8e18-76f80df40b25",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trust Boundary",
@@ -71,8 +71,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "d9470387-a68b-4e40-9820-42da6eed816b",
             "zIndex": -1,
+            "id": "d9470387-a68b-4e40-9820-42da6eed816b",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trust Boundary",
@@ -91,8 +91,8 @@
           },
           {
             "position": {
-              "x": 330,
-              "y": 470
+              "x": 338.75,
+              "y": 475
             },
             "size": {
               "width": 390,
@@ -105,8 +105,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "4222cb06-7f75-4055-8827-1237c300c675",
             "zIndex": -1,
+            "id": "4222cb06-7f75-4055-8827-1237c300c675",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Application / DMZ ZONE",
@@ -122,12 +122,20 @@
                 "32d8642b-6a9f-45ce-96dc-a9df7b5097bb",
                 "40b77d3f-7e04-4281-8095-88a2b0a09112",
                 "3850c271-b36d-4c6a-a51a-e4d1ef09a0b8",
-                "b98bd9d8-0162-410b-b675-f35d7fc08008"
+                "b98bd9d8-0162-410b-b675-f35d7fc08008",
+                "d6aeb6cd-f8fe-4fe9-8bd8-da63754c2e98"
               ],
               "containedElements": [
                 "ab58b3df-3a7f-4459-88aa-33dfc84ea236",
                 "b333febd-672e-4b15-8cb8-c5f03752b7fd"
               ]
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -146,8 +154,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "24d4c41a-52c6-495a-8ca4-47891c468acd",
             "zIndex": -1,
+            "id": "24d4c41a-52c6-495a-8ca4-47891c468acd",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trust Boundary",
@@ -178,8 +186,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "681a655c-87d2-4602-9488-cf3f69563d87",
             "zIndex": -1,
+            "id": "681a655c-87d2-4602-9488-cf3f69563d87",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trust Boundary",
@@ -187,7 +195,8 @@
               "isTrustBoundary": true,
               "hasOpenThreats": false,
               "crossingFlows": [
-                "3b725b38-42e3-4937-aa3f-5d26af1b8436"
+                "3b725b38-42e3-4937-aa3f-5d26af1b8436",
+                "b98bd9d8-0162-410b-b675-f35d7fc08008"
               ],
               "containedElements": [
                 "97be4a60-7502-476b-bf23-1cf7a57f6c89"
@@ -1546,6 +1555,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 15,
             "ports": {
               "groups": {
                 "top": {
@@ -1629,7 +1639,6 @@
               ]
             },
             "id": "17311552-ce86-4aff-8f00-76558fdae305",
-            "zIndex": 15,
             "data": {
               "type": "tm.Actor",
               "name": "Email Service",
@@ -1662,6 +1671,61 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
+              "name": "Webhook Callback Status",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "4222cb06-7f75-4055-8827-1237c300c675",
+                "681a655c-87d2-4602-9488-cf3f69563d87"
+              ]
+            },
+            "labels": [
+              "Webhook Callback Status"
+            ],
+            "id": "b98bd9d8-0162-410b-b675-f35d7fc08008",
+            "source": {
+              "cell": "97be4a60-7502-476b-bf23-1cf7a57f6c89",
+              "port": "a25e1ddf-bd38-462f-b4c3-581503a46bfd"
+            },
+            "target": {
+              "cell": "b333febd-672e-4b15-8cb8-c5f03752b7fd",
+              "port": "d264c018-c832-49bf-92fb-a8d9aef1be61"
+            },
+            "vertices": [
+              {
+                "x": 710,
+                "y": 400
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 17,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
               "name": "Data Flow",
               "description": "",
               "outOfScope": false,
@@ -1680,21 +1744,15 @@
             "labels": [
               "Data Flow"
             ],
-            "id": "b98bd9d8-0162-410b-b675-f35d7fc08008",
+            "id": "d6aeb6cd-f8fe-4fe9-8bd8-da63754c2e98",
             "source": {
-              "x": 705,
-              "y": 330
+              "x": 560,
+              "y": 550
             },
             "target": {
-              "cell": "b333febd-672e-4b15-8cb8-c5f03752b7fd",
-              "port": "d264c018-c832-49bf-92fb-a8d9aef1be61"
-            },
-            "vertices": [
-              {
-                "x": 705,
-                "y": 350
-              }
-            ]
+              "cell": "ab58b3df-3a7f-4459-88aa-33dfc84ea236",
+              "port": "cd422e03-7ed1-42de-8148-f68d5b87a4e7"
+            }
           }
         ]
       }
