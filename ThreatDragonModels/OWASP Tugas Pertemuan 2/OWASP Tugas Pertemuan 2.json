@@ -121,7 +121,8 @@
                 "010331f3-757d-459e-adf0-91c45b7dd937",
                 "32d8642b-6a9f-45ce-96dc-a9df7b5097bb",
                 "40b77d3f-7e04-4281-8095-88a2b0a09112",
-                "3850c271-b36d-4c6a-a51a-e4d1ef09a0b8"
+                "3850c271-b36d-4c6a-a51a-e4d1ef09a0b8",
+                "b98bd9d8-0162-410b-b675-f35d7fc08008"
               ],
               "containedElements": [
                 "ab58b3df-3a7f-4459-88aa-33dfc84ea236",
@@ -1639,14 +1640,61 @@
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 16,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "4222cb06-7f75-4055-8827-1237c300c675"
+              ]
+            },
+            "labels": [
+              "Data Flow"
+            ],
+            "id": "b98bd9d8-0162-410b-b675-f35d7fc08008",
+            "source": {
+              "x": 705,
+              "y": 330
+            },
+            "target": {
+              "cell": "b333febd-672e-4b15-8cb8-c5f03752b7fd",
+              "port": "d264c018-c832-49bf-92fb-a8d9aef1be61"
+            },
+            "vertices": [
+              {
+                "x": 705,
+                "y": 350
+              }
+            ]
           }
         ]
       }
