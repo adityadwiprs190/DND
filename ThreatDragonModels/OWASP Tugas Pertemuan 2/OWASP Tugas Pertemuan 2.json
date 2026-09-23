@@ -129,13 +129,6 @@
                 "ab58b3df-3a7f-4459-88aa-33dfc84ea236",
                 "b333febd-672e-4b15-8cb8-c5f03752b7fd"
               ]
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -1726,7 +1719,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "API Response",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1742,7 +1735,7 @@
               ]
             },
             "labels": [
-              "Data Flow"
+              "API Response"
             ],
             "id": "d6aeb6cd-f8fe-4fe9-8bd8-da63754c2e98",
             "source": {
@@ -1752,7 +1745,13 @@
             "target": {
               "cell": "ab58b3df-3a7f-4459-88aa-33dfc84ea236",
               "port": "cd422e03-7ed1-42de-8148-f68d5b87a4e7"
-            }
+            },
+            "vertices": [
+              {
+                "x": 520,
+                "y": 610
+              }
+            ]
           }
         ]
       }
