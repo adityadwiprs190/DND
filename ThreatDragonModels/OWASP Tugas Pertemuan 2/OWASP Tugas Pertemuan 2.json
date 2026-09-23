@@ -115,12 +115,12 @@
               "hasOpenThreats": false,
               "crossingFlows": [
                 "3763b834-e4b2-40a6-b6d1-5949251e59ee",
-                "40b77d3f-7e04-4281-8095-88a2b0a09112",
                 "3b725b38-42e3-4937-aa3f-5d26af1b8436",
                 "8cd00827-02f3-4b04-9557-591f56a21169",
                 "ad4979d7-b6da-455a-9383-01e14b0d3ea4",
                 "010331f3-757d-459e-adf0-91c45b7dd937",
                 "32d8642b-6a9f-45ce-96dc-a9df7b5097bb",
+                "40b77d3f-7e04-4281-8095-88a2b0a09112",
                 "3850c271-b36d-4c6a-a51a-e4d1ef09a0b8"
               ],
               "containedElements": [
@@ -157,7 +157,7 @@
                 "40b77d3f-7e04-4281-8095-88a2b0a09112"
               ],
               "containedElements": [
-                "7fd40c32-788a-4864-a487-16e3bf3341d2"
+                "17311552-ce86-4aff-8f00-76558fdae305"
               ]
             }
           },
@@ -668,131 +668,10 @@
             }
           },
           {
-            "position": {
-              "x": 720,
-              "y": 760
-            },
-            "size": {
-              "width": 130,
-              "height": 120
-            },
-            "attrs": {
-              "text": {
-                "text": "Email Service"
-              },
-              "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              }
-            },
-            "visible": true,
-            "shape": "process",
-            "zIndex": 5,
-            "ports": {
-              "groups": {
-                "top": {
-                  "position": "top",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "position": "right",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "bottom": {
-                  "position": "bottom",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "left": {
-                  "position": "left",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                }
-              },
-              "items": [
-                {
-                  "group": "top",
-                  "id": "d264c018-c832-49bf-92fb-a8d9aef1be61"
-                },
-                {
-                  "group": "right",
-                  "id": "cd422e03-7ed1-42de-8148-f68d5b87a4e7"
-                },
-                {
-                  "group": "bottom",
-                  "id": "ea179bbb-3a61-41f1-abdb-af0a80cfce31"
-                },
-                {
-                  "group": "left",
-                  "id": "3b96515f-125d-4d4c-94de-58b13842fa43"
-                }
-              ]
-            },
-            "id": "7fd40c32-788a-4864-a487-16e3bf3341d2",
-            "data": {
-              "type": "tm.Process",
-              "name": "Email Service",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "handlesCardPayment": false,
-              "handlesGoodsOrServices": false,
-              "isWebApplication": false,
-              "privilegeLevel": "",
-              "threats": []
-            }
-          },
-          {
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
                 "targetMarker": {
                   "name": "block"
                 },
@@ -813,26 +692,12 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [
-                {
-                  "id": "0301d298-3a06-43bd-94cd-949cc4fff3cd",
-                  "title": "New STRIDE threat",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Tampering",
-                  "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": true,
-                  "number": 1,
-                  "score": ""
-                }
-              ],
+              "threats": [],
               "trustBoundaryIds": [
                 "274333a2-6c5b-4ccb-8e18-76f80df40b25",
                 "4222cb06-7f75-4055-8827-1237c300c675"
@@ -855,17 +720,7 @@
                 "x": 260,
                 "y": 740
               }
-            ],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
+            ]
           },
           {
             "shape": "flow",
@@ -916,61 +771,6 @@
               {
                 "x": 460,
                 "y": 720
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Trigger Email Notifikasi",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": [
-                "4222cb06-7f75-4055-8827-1237c300c675",
-                "24d4c41a-52c6-495a-8ca4-47891c468acd"
-              ]
-            },
-            "labels": [
-              "Trigger Email Notifikasi"
-            ],
-            "id": "40b77d3f-7e04-4281-8095-88a2b0a09112",
-            "source": {
-              "cell": "b333febd-672e-4b15-8cb8-c5f03752b7fd",
-              "port": "ea179bbb-3a61-41f1-abdb-af0a80cfce31"
-            },
-            "target": {
-              "cell": "7fd40c32-788a-4864-a487-16e3bf3341d2",
-              "port": "3b96515f-125d-4d4c-94de-58b13842fa43"
-            },
-            "vertices": [
-              {
-                "x": 630,
-                "y": 820
               }
             ]
           },
@@ -1246,6 +1046,61 @@
               {
                 "x": 210,
                 "y": 500
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Trigger Email Notifikasi",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "4222cb06-7f75-4055-8827-1237c300c675",
+                "24d4c41a-52c6-495a-8ca4-47891c468acd"
+              ]
+            },
+            "labels": [
+              "Trigger Email Notifikasi"
+            ],
+            "id": "40b77d3f-7e04-4281-8095-88a2b0a09112",
+            "source": {
+              "cell": "b333febd-672e-4b15-8cb8-c5f03752b7fd",
+              "port": "ea179bbb-3a61-41f1-abdb-af0a80cfce31"
+            },
+            "target": {
+              "cell": "17311552-ce86-4aff-8f00-76558fdae305",
+              "port": "cb388018-c0f0-4fa1-996f-f136da999d60"
+            },
+            "vertices": [
+              {
+                "x": 600,
+                "y": 815
               }
             ]
           },
@@ -1668,6 +1523,130 @@
                 "y": 420
               }
             ]
+          },
+          {
+            "position": {
+              "x": 728.75,
+              "y": 785
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Email Service"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "127655bd-91db-4a64-9668-9fd6227fc46e"
+                },
+                {
+                  "group": "right",
+                  "id": "42cacb54-00ac-4e94-9ccd-048bdc99a635"
+                },
+                {
+                  "group": "bottom",
+                  "id": "15d01ab1-09c6-46df-8c9b-41e96ee7d499"
+                },
+                {
+                  "group": "left",
+                  "id": "cb388018-c0f0-4fa1-996f-f136da999d60"
+                }
+              ]
+            },
+            "id": "17311552-ce86-4aff-8f00-76558fdae305",
+            "zIndex": 15,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Email Service",
+              "description": "",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
+            }
           }
         ]
       }
