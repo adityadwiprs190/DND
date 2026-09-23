@@ -210,8 +210,8 @@
                 "text": "Admin"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -308,9 +308,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "8cdc4791-4498-4d24-acac-3bc8ecc4d922",
+                  "title": "Pengambilan akun Pengguna",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Penyerang mencuri kredensial login atau token sesi milik admin sah untuk menyamar dan masuk ke dalam sistem toko online.",
+                  "mitigation": "Terapkan autentikasi multi-faktor (MFA), berlakukan kebijakan kata sandi yang kuat, dan atur waktu kedaluwarsa sesi (session timeout) yang relatif singkat.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": "8,5"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -327,8 +345,8 @@
                 "text": "Customer"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -425,9 +443,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "619be835-8c02-4f59-8bc1-0ef1485ae957",
+                  "title": "Pengambilan akun pengguna",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Penyerang mencuri kredensial login atau token sesi milik customersah untuk menyamar dan masuk ke dalam sistem toko online.",
+                  "mitigation": "Terapkan autentikasi multi-faktor (MFA), berlakukan kebijakan kata sandi yang kuat, dan atur waktu kedaluwarsa sesi (session timeout) yang relatif singkat.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": "8.5"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -564,8 +600,8 @@
                 "text": "REST API"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -662,12 +698,60 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "bb4a9098-662c-480a-bd09-3bfde80bbd49",
+                  "title": "Bypass Hak Akses",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Elevation of privilege",
+                  "description": "Pelanggan biasa memanipulasi parameter pada request untuk melakukan operasi yang seharusnya hanya boleh dilakukan oleh Admin.",
+                  "mitigation": "Terapkan Role-Based Access Control (RBAC) yang ketat. Validasi identitas dan izin (permissions) dari token JWT di sisi server untuk setiap permintaan.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": "9.8"
+                },
+                {
+                  "id": "3feaeddd-c2d7-48b8-abe7-33e67c0fb40c",
+                  "title": "Pemalsuan Notifikasi Webhook Pembayaran",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Spoofing",
+                  "description": "Penyerang mengirimkan request palsu yang menyamar sebagai notifikasi Webhook dari Payment Gateway, membuat sistem menganggap suatu transaksi berstatus \"Lunas\" padahal pembayaran belum dilakukan.",
+                  "mitigation": "Selalu verifikasi digital signature atau Callback Token dari header webhook untuk memastikan pesan berasal dari Payment Gateway yang sah.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": "9.8"
+                },
+                {
+                  "id": "d72a55a5-c999-4c57-a373-7c9f3ee9794c",
+                  "title": "Kurangnya Jejak Audit Transaksi yang Aman",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Sistem tidak mencatat log aktivitas secara memadai. Jika ada pelanggan/admin yang mengklaim tidak melakukan suatu aksi, sistem tidak punya bukti.",
+                  "mitigation": "Implementasikan sistem Audit Logging terpusat yang merekam setiap operasi penting dengan akses append-only.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": "5"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
+              }
             }
           },
           {
@@ -729,7 +813,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -750,13 +835,45 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "3186a21d-ac3f-4bf3-a076-4e13cca1d8ec",
+                  "title": "Modifikasi Payload Transaksi Pembelian",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Penyerang mencegat aliran data di jaringan komunikasi antara klien dan server, lalu mengubah data penting di keranjang belanja sebelum data diproses oleh REST API.",
+                  "mitigation": "Wajibkan penggunaan koneksi terenkripsi HTTPS (TLS 1.2/1.3) untuk semua aliran data. Lakukan validasi ulang harga barang di sisi server sebelum memproses pembayaran.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": "8"
+                },
+                {
+                  "id": "b2812f3b-8eda-4511-9b2b-c0b93a6cb8eb",
+                  "title": "Serangan Flooding pada API",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Penyerang membanjiri REST API dengan ribuan permintaan palsu secara otomatis, menyebabkan server kehabisan memori sehingga toko online down dan tidak bisa diakses pengguna sah.",
+                  "mitigation": "Terapkan Rate Limiting dan Throttling pada level REST API. Gunakan Web Application Firewall (WAF).",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": "8"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 1
+              }
             },
             "labels": [
               "HTTP API Requests"
@@ -1238,11 +1355,13 @@
                 "text": "SQL"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1339,13 +1458,40 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "872cd942-f2f6-4569-98f8-707f0f59b659",
+                  "title": "Pencurian Database melalui SQL Injection",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Information disclosure",
+                  "description": "Kurangnya validasi input memungkinkan penyerang menyisipkan perintah SQL berbahaya untuk mengekstrak seluruh isi tabel pengguna dari database.",
+                  "mitigation": "Gunakan Prepared Statements (Parameterized Queries) di backend Node.js untuk mencegah input pengguna dieksekusi sebagai perintah SQL.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": "9.5"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -1703,7 +1849,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1719,23 +1866,42 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "API Response",
+              "name": "JSON Response",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
+              "threats": [
+                {
+                  "id": "25115ef3-c6ef-4f35-8ae0-014269aad1b8",
+                  "title": "Kebocoran Data Sensitif melalui API",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Respons dari REST API mengembalikan data secara berlebihan kepada aplikasi klien, sehingga data sensitif pelanggan lain atau API Key tidak sengaja terekspos di jaringan.",
+                  "mitigation": "Implementasikan pemfilteran respons di sisi server sehingga API hanya mengembalikan atribut data yang benar-benar dibutuhkan oleh UI frontend. Jangan pernah mengirimkan kata sandi atau secret key ke frontend.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": "6.5"
+                }
+              ],
               "trustBoundaryIds": [
                 "4222cb06-7f75-4055-8827-1237c300c675"
-              ]
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 2,
+                "denialOfService": 0
+              }
             },
             "labels": [
-              "API Response"
+              "JSON Response"
             ],
             "id": "d6aeb6cd-f8fe-4fe9-8bd8-da63754c2e98",
             "source": {
@@ -1758,6 +1924,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 1
+    "threatTop": 13
   }
 }
